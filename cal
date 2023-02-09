@@ -1,0 +1,37 @@
+import javax.swing.JOptionPane;
+public class NewClass {
+    
+    public static void main( String[] args){
+        
+        String firstNumber = 
+                JOptionPane.showInputDialog("digite um numero");
+        String secondNumber =
+                JOptionPane.showInputDialog(" muito bem, digite outro numero");
+        
+        String operador =
+                JOptionPane.showInputDialog("ok, digite o operador\n+ = Adição\n- = subtração\n* = multiplicação");
+       
+        int Number1 = Integer.parseInt(firstNumber);
+        int  Number2 = Integer.parseInt(secondNumber);
+        int soma = Number1 + Number2;
+        
+        if(operador.equals("+")){
+            
+              JOptionPane.showMessageDialog(null," a soma é "+ soma,
+                "soma dos dois inteiros",JOptionPane.PLAIN_MESSAGE);
+        }else if(operador.equals("-")){
+        int subtra = Number1 - Number2;
+        
+        JOptionPane.showMessageDialog(null," a subtração é "+ subtra,
+                "a subtração dos dois inteiros",JOptionPane.PLAIN_MESSAGE);
+        }else if(operador.equals("*")) { 
+            int multipli = Number1 * Number2;
+        
+        JOptionPane.showMessageDialog(null," a multiplicação é "+ multipli,
+                "multiplicação dos dois inteiros",JOptionPane.PLAIN_MESSAGE);
+        
+        }else{
+            JOptionPane.showMessageDialog(null, "ERRO", "calculadora", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+}
